@@ -80,7 +80,7 @@ export const getLocation = createAsyncThunk(
               });
             });
             dispatch(setMyPlace(placeList));
-            console.log('hdsjalh', placeList.features[0].geometry.coordinates);
+         
           } else {
             dispatch(setMyPlace(placeList));
             dispatch(setLoading(false));
