@@ -14,8 +14,6 @@ import {getLocation, postLocation, setLoading} from '@src/app/store/home';
 import * as styles from './HomeStyle';
 import BackgroundService from 'react-native-background-actions';
 
-const sleep = (time: any) =>
-  new Promise<void>(resolve => setTimeout(() => resolve(), time));
 
 Mapbox.setAccessToken(
   'sk.eyJ1Ijoic2liZWxzdWJhdGFuIiwiYSI6ImNsbGlobDlwdzE1YWQzZHFqdW1xZ21ycHMifQ.JLCciRLFOJVVWAbihKpJ3Q',
