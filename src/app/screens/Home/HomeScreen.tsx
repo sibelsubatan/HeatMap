@@ -48,24 +48,10 @@ const HomeScreen: FC = () => {
   const [hasLocationPermissions, sethasLocationPermissions] =
     useState<boolean>(false);
 
-  // const veryIntensiveTask = async taskDataArguments => {
-  //   // Example of an infinite loop task
-  //   const {delay} = taskDataArguments;
-  //   console.log('delay', delay);
-  //   await new Promise(async resolve => {
-  //     for (let i = 0; BackgroundService.isRunning(); i++) {
-  //       console.log(i);
-  //       await sleep(delay);
-  //     }
-  //   });
-  //   await BackgroundService.stop();
-  // };
+
 
   const requestLocationPermission = async () => {
     try {
-      const isGranted = Mapbox.requestAndroidLocationPermissions();
-      console.log('isGranted', isGranted);
-
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
       );
@@ -90,29 +76,10 @@ const HomeScreen: FC = () => {
       dispatch(getLocation());
     }, [dispatch]),
   );
-  const options = {
-    taskName: 'Example',
-    taskTitle: 'ExampleTask title',
-    taskDesc: 'ExampleTask description',
-    taskIcon: {
-      name: 'ic_launcher',
-      type: 'mipmap',
-    },
-    color: '#ff00ff',
-    linkingURI: 'yourSchemeHere://chat/jane', // See Deep Linking for more info
-    parameters: {
-      delay: 1000,
-    },
-  };
 
   const UpdateUserLocation = async (newLocation, veryIntensiveTask) => {
-    await BackgroundService.start(veryIntensiveTask, options);
-    console.log('newLocationnnnnn');
-
-    await BackgroundService.stop();
     const interval = setInterval(() => {
-      console.log('newLocation');
-      //  dispatch(postLocation(newLocation));
+        dispatch(postLocation(newLocation));
     }, 1000);
 
     return () => clearInterval(interval);
