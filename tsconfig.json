@@ -1,0 +1,29 @@
+// prettier-ignore
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "isolatedModules": true,
+    "strict": true,
+    "lib": ["es2017"],
+    "skipLibCheck": true,
+    "declaration": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./*"],
+      "@root/*": ["./*"],
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"]
+    }
+  }
+}

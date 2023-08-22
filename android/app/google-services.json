@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1057163391625",
+    "project_id": "heatmap-6f8eb",
+    "storage_bucket": "heatmap-6f8eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057163391625:android:d16c980a310744c23f0c58",
+        "android_client_info": {
+          "package_name": "com.sibel.heatmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057163391625-tv14q106oaabr5m6tjktssd9iat34hfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLIdP_O7UxEyAhws86DTh95edOar2wK-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057163391625-tv14q106oaabr5m6tjktssd9iat34hfi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1057163391625-kp0j43feectv1jl0eslc5s4pgu13o9jr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sibel.heatmap"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
